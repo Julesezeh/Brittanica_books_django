@@ -16,7 +16,7 @@ class Author(models.Model):
 class Book(models.Model):
     id = models.UUIDField(default=uuid4(), primary_key=True)
     title = models.CharField(max_length=100)
-    locccn = models.IntegerField(max_length=30)
+    locccn = models.IntegerField()
 
     # author  = models.ForeignKey(on_delete=models.CASCADE)
     def __str__(self):
