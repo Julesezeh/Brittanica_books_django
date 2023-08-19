@@ -10,3 +10,7 @@ class BookSerializer(serializers.ModelSerializer):
     class Meta:
         model = Book
         fields = "__all__"
+class BookUpdateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Book
+        fields = ("locccn","title")
