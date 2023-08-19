@@ -11,5 +11,5 @@ class User(models.Model):
 
 class Book(models.Model):
     title = models.CharField(max_length=100, blank=False, null=False,unique=True)
-    user = models.ForeignKey(User,on_delete=models.CASCADE,blank=True)
+    user = models.ForeignKey(User,on_delete=models.CASCADE,blank=False,null=False)
     locccn = models.IntegerField(blank=False,null=False)
