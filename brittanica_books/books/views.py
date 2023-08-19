@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework.response import Response
 from .models import User,Book
-from .serializers import UserSerializer,BookSerializer, BookUpdateSerializer
+from .serializers import UserSerializer,BookSerializer, BookUpdateSerializer, UserUpdateSerializer
 from rest_framework.views import APIView
 from rest_framework import status
 # Create your views here.
@@ -22,6 +22,27 @@ class UserView(APIView):
                 return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         except Exception as e:
             return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+    def put(self,request,pk):
+        try:
+            user = User.objects.get(pk=pk)
+            serializer = UserUpdateSerializer(user,data=request.data)
+            if serializer.is_valid():
+                serializer.save()
+                return Response({"successful":serializer.data},status=status.HTTP_200_OK)
+            else:
+                return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
+        except User.DoesNotExist:
+            return Response({"error":"User does not exist"}, status=status.HTTP_404_NOT_FOUND)
+                
+    def delete(self,request,pk):
+        try:
+            user = User.objects.get(pk=pk)
+            if user:
+                user.delete()
+                return Response({"success":"User deleted"},status=status.HTTP_204_NO_CONTENT)
+        except User.DoesNotExist:
+            return Response({"error":"User does not exist"},status=status.HTTP_404_NOT_FOUND)
 
 class BooksView(APIView):
     def get(self,request):
@@ -41,11 +62,9 @@ class BooksView(APIView):
         except Exception as e:
             return Response({"error":str(e)},status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         
-    def put(self,request):
-        title = request.query_params.get("title")
+    def put(self,request,pk):
         try:
-            print(title)
-            book = Book.objects.get(title=title)
+            book = Book.objects.get(pk=pk)
             print(book)
             if book:
                 serializer = BookUpdateSerializer(book,data=request.data)
