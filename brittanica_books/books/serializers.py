@@ -2,9 +2,15 @@ from rest_framework import serializers
 from .models import User,Book
 
 class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = "__all__"
+
+
+class UserCreationSerializer(serializers.ModelSerializer):
     first_name = serializers.CharField(required=True)
     last_name = serializers.CharField(required=True)
-    username = serializers.CharField(required=True)
+    user_name = serializers.CharField(required=True)
 
     class Meta:
         model = User

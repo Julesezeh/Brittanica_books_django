@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework.response import Response
 from .models import User,Book
-from .serializers import UserSerializer,BookSerializer, BookUpdateSerializer, UserUpdateSerializer
+from .serializers import UserSerializer,BookSerializer, BookUpdateSerializer, UserUpdateSerializer, UserCreationSerializer
 from rest_framework.views import APIView
 from rest_framework import status
 # Create your views here.
@@ -14,7 +14,7 @@ class UserView(APIView):
     
     def post(self, request):
         try:
-            serializer = UserSerializer(data=request.data)
+            serializer = UserCreationSerializer(data=request.data)
             if serializer.is_valid():
                 serializer.save()
                 return Response({"successful": serializer.data }, status=status.HTTP_201_CREATED)
