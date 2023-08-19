@@ -66,4 +66,4 @@ class BooksView(APIView):
             return Response({"success":"Book deleted successfully"}, status=status.HTTP_204_NO_CONTENT)
 
         except Book.DoesNotExist:
-            return Response({"Error":str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            return Response({"Error":"Book does not exist"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
