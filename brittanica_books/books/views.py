@@ -25,6 +25,7 @@ class UserView(APIView):
         
     def put(self,request,pk):
         try:
+            pk=pk
             user = User.objects.get(pk=pk)
             serializer = UserUpdateSerializer(user,data=request.data)
             if serializer.is_valid():
@@ -64,6 +65,7 @@ class BooksView(APIView):
         
     def put(self,request,pk):
         try:
+            pk=pk
             book = Book.objects.get(pk=pk)
             print(book)
             if book:
