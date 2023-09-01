@@ -72,6 +72,8 @@ class BooksView(APIView):
                 serializer = BookUpdateSerializer(book,data=request.data)
                 if serializer.is_valid():
                     serializer.save()
+                    print("Okay")
+
                     return Response(serializer.data,status=status.HTTP_200_OK)
                 else:
                     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
