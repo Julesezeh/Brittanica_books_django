@@ -35,4 +35,4 @@ class BookSerializer(serializers.ModelSerializer):
 class BookUpdateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Book
-        fields = ("locccn","title")
+        fields = ("locccn","title","description")
