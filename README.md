@@ -32,7 +32,7 @@
 }
 ```
 ### DELETE A BOOK
-                https://britanncaflask.pythonanywhere.com/api/books/{id} -->
+                https://brittanicadjango.pythonanywhere.com/api/v1/books/{book_id}
 
 # USERS
 ### GET ALL USERS (GET)
