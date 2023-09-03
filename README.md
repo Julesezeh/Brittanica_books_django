@@ -1,5 +1,4 @@
-[SWAGGER DOCUMENTATION](https://brittanica-books.onrender.com/docs)
-![Library Gif](https://media.tenor.co/images/e6d4279e0f2123fedab2867e5ded1b4b/raw)
+![Library Gif](http://25.media.tumblr.com/948e64b952b036c0c3d2c7469a2075a8/tumblr_n3kratI12p1t96jpzo1_500.gif)
 
 # BOOKS
 
