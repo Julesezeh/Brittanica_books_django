@@ -42,14 +42,16 @@
                 https://brittanica-books.onrender.com/api/v1/users{id}
 
 ### CREATE NEW USER (POST)
-                https://brittanica-books.onrender.com/api/v1/users
+                https://brittanicadjango.pythonanywhere.com/api/v1/users/
 
 
 *payload (Example Value)*
 ```js
 {
-  "email": "string",
-  "password":"string"
+  "first_name":"string",
+  "last_name":"string",
+  "user_name":"string",
+  "email":"string"
 }
 ```
 
