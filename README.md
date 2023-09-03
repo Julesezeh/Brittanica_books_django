@@ -11,14 +11,16 @@
 
 
 ### CREATE NEW BOOK (POST)
-                https://brittanica-books.onrender.com/api/v1/users/{user_id}/books
+                https://brittanicadjango.pythonanywhere.com/api/v1/books/
 
 
 *payload (Example Value)*
 ```js
 {
-  "title": "string",
-  "locccn": 0
+  "title":"String",
+  "user":0,
+  "locccn":0,
+  "description":"String"
 }
 ```
 
