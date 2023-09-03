@@ -68,4 +68,4 @@
 ```
 
 ### DELETE A USER (DELETE) 
-               https://brittanica-books.onrender.com/api/v1/users/{id}
+               https://brittanicadjango.pythonanywhere.com/api/v1/users/{user_id}
