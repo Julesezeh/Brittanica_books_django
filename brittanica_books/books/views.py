@@ -7,7 +7,11 @@ from rest_framework import status
 # Create your views here.
 
 class UserView(APIView):
-    def get(self,request):
+    def get(self,request,pk=None):
+        if pk:
+            users = User.objects.get(pk=pk)
+            serializer = UserSerializer(users)
+            return Response(serializer.data)
         users = User.objects.all()
         serializer = UserSerializer(users,many=True)
         return Response(serializer.data)

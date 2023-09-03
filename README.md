@@ -39,7 +39,7 @@
                 https://brittanicadjango.pythonanywhere.com/api/v1/users/
 
 ### GET SPECIFIC USER (GET)
-                https://brittanica-books.onrender.com/api/v1/users{id}
+                https://brittanicadjango.pythonanywhere.com/api/v1/users/
 
 ### CREATE NEW USER (POST)
                 https://brittanicadjango.pythonanywhere.com/api/v1/users/
