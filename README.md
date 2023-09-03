@@ -4,7 +4,7 @@
 
 ### GET ALL BOOKS (GET)
 
-                https://brittanica-books.onrender.com/api/v1/books/
+                https://brittanicadjango.pythonanywhere.com/api/v1/books/
 
 ### GET SPECIFIC BOOK BY LOCCCN (GET)
                 https://brittanica-books.onrender.com/api/v1/book/?locccn=int
