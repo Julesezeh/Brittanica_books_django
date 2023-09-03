@@ -36,7 +36,7 @@
 
 # USERS
 ### GET ALL USERS (GET)
-                https://brittanica-books.onrender.com/api/v1/users
+                https://brittanicadjango.pythonanywhere.com/api/v1/users/
 
 ### GET SPECIFIC USER (GET)
                 https://brittanica-books.onrender.com/api/v1/users{id}
