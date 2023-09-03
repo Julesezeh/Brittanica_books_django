@@ -6,10 +6,6 @@
 
                 https://brittanicadjango.pythonanywhere.com/api/v1/books/
 
-### GET SPECIFIC BOOK BY LOCCCN (GET)
-                https://brittanica-books.onrender.com/api/v1/book/?locccn=int
-
-
 ### CREATE NEW BOOK (POST)
                 https://brittanicadjango.pythonanywhere.com/api/v1/books/
 
@@ -25,13 +21,14 @@
 ```
 
 ### UPDATE A BOOK (PUT)
-                https://britanncaflask.pythonanywhere.com/api/books/{id}
+                https://brittanicadjango.pythonanywhere.com/api/v1/books/{book_id}
 
 *payload (Example value)*
 ```js
 {
   "title": "string",
-  "locccn": 0
+  "locccn": 0,
+    "description":"String"  
 }
 ```
 ### DELETE A BOOK
