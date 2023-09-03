@@ -6,6 +6,10 @@
 
                 https://brittanicadjango.pythonanywhere.com/api/v1/books/
 
+### GET SPECIFIC BOOK (GET)
+                https://brittanicadjango.pythonanywhere.com/api/v1/books/{book_id}
+
+
 ### CREATE NEW BOOK (POST)
                 https://brittanicadjango.pythonanywhere.com/api/v1/books/
 

@@ -50,7 +50,12 @@ class UserView(APIView):
             return Response({"error":"User does not exist"},status=status.HTTP_404_NOT_FOUND)
 
 class BooksView(APIView):
-    def get(self,request):
+    def get(self,request, pk:int=None):
+        if pk:
+            book = Book.objects.get(pk=pk)
+            serializer = BookSerializer(book)
+            return Response(serializer.data,status=status.HTTP_200_OK)
+
         books = Book.objects.all()
         serializer = BookSerializer(books,many=True)
         return Response(serializer.data,status=status.HTTP_200_OK)
