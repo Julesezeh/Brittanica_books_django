@@ -54,14 +54,14 @@
 ```
 
 ### UPDATE A USER (PUT)
-            https://brittanica-books.onrender.com/api/v1/users/{id}
+            https://brittanicadjango.pythonanywhere.com/api/v1/users/{user_id}
 
 *payload (Example value)*
 ```js
 {
   "email": "string",
-  "is_active": bool,
-
+  "last_name":"string",
+  "first_name":"string"
 }
 ```
 
